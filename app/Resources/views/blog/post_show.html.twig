@@ -60,4 +60,7 @@
     {{ parent() }}
 
     {{ show_source_code(_self) }}
+    <a href="{{ path('blog_post', { slug: post.slug })|amp_path }}" class="btn btn-success btn-lg btn-block">
+        ⚡ {{ 'action.amp_version'|trans }}
+    </a>
 {% endblock %}

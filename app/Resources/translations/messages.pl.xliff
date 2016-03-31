@@ -72,6 +72,10 @@
                 <source>action.show_code</source>
                 <target>Pokaż kod</target>
             </trans-unit>
+            <trans-unit id="action.amp_version">
+                <source>action.amp_version</source>
+                <target>Pokaż wersję AMP</target>
+            </trans-unit>
             <trans-unit id="action.edit">
                 <source>action.edit</source>
                 <target>Edytuj</target>

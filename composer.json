@@ -18,7 +18,7 @@
         "incenteev/composer-parameter-handler" : "~2.1",
         "ircmaxell/password-compat"            : "~1.0",
         "knplabs/knp-paginator-bundle"         : "~2.4",
-        "leafo/scssphp"                        : "~0.1.5",
+        "leafo/scssphp"                        : "~0.1",
         "patchwork/jsqueeze"                   : "~1.0",
         "sensio/distribution-bundle"           : "~5.0",
         "sensio/framework-extra-bundle"        : "~3.0",
@@ -26,7 +26,8 @@
         "symfony/monolog-bundle"               : "~2.7",
         "symfony/swiftmailer-bundle"           : "~2.3",
         "symfony/symfony"                      : "~2.8",
-        "twig/extensions"                      : "~1.2"
+        "twig/extensions"                      : "~1.2",
+        "takeit/amp-html-bundle"               : "^0.1.0@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0"
@@ -50,11 +51,9 @@
         ]
     },
     "config": {
-        "bin-dir": "bin",
-        "platform": {
-            "php": "5.3.9"
-        }
+        "bin-dir": "bin"
     },
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

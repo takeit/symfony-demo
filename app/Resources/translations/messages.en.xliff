@@ -109,6 +109,10 @@
                 <source>action.show_code</source>
                 <target>Show code</target>
             </trans-unit>
+            <trans-unit id="action.amp_version">
+                <source>action.amp_version</source>
+                <target>Show AMP version</target>
+            </trans-unit>
             <trans-unit id="action.edit">
                 <source>action.edit</source>
                 <target>Edit</target>

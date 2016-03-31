@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
+use Takeit\Bundle\AmpHtmlBundle\Model\AmpInterface;
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\PostRepository")
@@ -19,12 +20,12 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  */
-class Post
+class Post implements AmpInterface
 {
     /**
      * Use constants to define configuration options that rarely change instead
      * of specifying them in app/config/config.yml.
-     * See http://symfony.com/doc/current/best_practices/configuration.html#constants-vs-configuration-options
+     * See http://symfony.com/doc/current/best_practices/configuration.html#constants-vs-configuration-options.
      */
     const NUM_ITEMS = 10;
 

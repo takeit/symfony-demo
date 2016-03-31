@@ -22,6 +22,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new CodeExplorerBundle\CodeExplorerBundle(),
+            new Takeit\Bundle\AmpHtmlBundle\TakeitAmpHtmlBundle(),
+            //
             new AppBundle\AppBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
         );

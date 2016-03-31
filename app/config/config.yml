@@ -95,3 +95,11 @@ swiftmailer:
 knp_paginator:
     template:
         pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig
+
+# TakeitAmpHmlBundle configuration (used to show posts in AMP HTML format)
+takeit_amp_html:
+    theme:
+        current_theme: "amp-theme"
+    model: AppBundle\Entity\Post
+    routing:
+        pattern: "{_locale}/{controller}/{action}"
