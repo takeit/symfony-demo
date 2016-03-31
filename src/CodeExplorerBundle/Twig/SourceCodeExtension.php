@@ -45,11 +45,11 @@ class SourceCodeExtension extends \Twig_Extension
         );
     }
 
-    public function showSourceCode(\Twig_Environment $twig, \Twig_Template $template)
+    public function showSourceCode(\Twig_Environment $twig, $template)
     {
         return $twig->render('@CodeExplorer/source_code.html.twig', array(
             'controller' => $this->getController(),
-            'template'   => $this->getTemplateSource($template),
+            'template'   => $this->getTemplateSource($twig->resolveTemplate($template)),
         ));
     }
 
@@ -62,13 +62,13 @@ class SourceCodeExtension extends \Twig_Extension
 
         $method = $this->getCallableReflector($this->controller);
 
-        $classCode = file($method->getFilename());
-        $methodCode = array_slice($classCode, $method->getStartline() - 1, $method->getEndLine() - $method->getStartline() + 1);
+        $classCode = file($method->getFileName());
+        $methodCode = array_slice($classCode, $method->getStartLine() - 1, $method->getEndLine() - $method->getStartLine() + 1);
         $controllerCode = '    '.$method->getDocComment()."\n".implode('', $methodCode);
 
         return array(
-            'file_path' => $method->getFilename(),
-            'starting_line' => $method->getStartline(),
+            'file_path' => $method->getFileName(),
+            'starting_line' => $method->getStartLine(),
             'source_code' => $this->unindentCode($controllerCode)
         );
     }

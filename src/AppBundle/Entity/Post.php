@@ -142,7 +142,7 @@ class Post implements AmpInterface
      */
     public function isAuthor(User $user)
     {
-        return $user->getEmail() == $this->getAuthorEmail();
+        return $user->getEmail() === $this->getAuthorEmail();
     }
 
     public function getPublishedAt()
